@@ -14,6 +14,8 @@ var gulp = require('gulp'),
   cache = require('gulp-cache'),
   autoprefixer = require('gulp-autoprefixer'),
   ftp = require('vinyl-ftp'),
+  svgmin = require("gulp-svgmin"),
+  svgstore = require("gulp-svgstore"),
   notify = require('gulp-notify');
 
 // Скрипты проекта
@@ -97,8 +99,17 @@ gulp.task('spritemade', function() {
 });
 gulp.task('sprite', ['cleansprite', 'spritemade']);
 
+// Сборка спрайтов SVG
+gulp.task("spritesvg", function(){
+  return gulp.src("app/img/icons/*.svg")
+  .pipe(svgmin())
+  .pipe(svgstore({inlineSvg: true}))
+  .pipe(rename("sprite.svg"))
+  .pipe(gulp.dest("app/img/"))
+});
 
-gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
+
+gulp.task('build', ['removedist', 'sprite', 'spritesvg', 'imagemin', 'sass', 'js'], function() {
 
   var buildFiles = gulp.src([
     'app/*.html',
