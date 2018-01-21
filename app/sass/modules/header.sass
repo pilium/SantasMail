@@ -1,0 +1,183 @@
+.main-container
+  position: relative
+  min-width: 320px
+  max-width: 1920px
+  margin: 0 auto
+
+.btn
+  display: inline-block
+  vertical-align: top
+  background: none
+  cursor: pointer
+
+.btn--primary
+  padding: 17px 42px
+  border-radius: 5px
+  background: #f74d45
+  box-shadow: 0px 3px 0px 0px #c63f3d, inset 0px 37px 0px 0px rgba(255, 255, 255, 0.09)
+  color: #fff
+  font-size: 24px
+  line-height: 36px
+  font-family: "PT Sans", Arial, sans-serif
+  font-weight: 700
+  transition: background 0.3s linear
+  &:hover
+    background: #fe3128
+  &:active
+    background: rgba(254, 49, 40, 0.8)
+
+.page-header
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  transform: translateZ(0)
+  width: 100%
+  background: #fff
+  &::after
+    content: ""
+    position: absolute
+    display: block
+    top: 32px
+    z-index: 1
+    width: 100%
+    height: 64px
+    background: url("../img/icicles.png") repeat-x
+    pointer-events: none
+
+.page-header__wrapper
+  position: relative
+  z-index: 2
+  display: -ms-flexbox
+  display: flex
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  min-width: 320px
+  margin: 0 auto
+  padding: 6px 0 8px
+  background: #fff
+
+.page-header__nav
+  width: 100%
+
+.page-header__logo
+  margin-left: auto
+  padding-left: 29px
+  img
+    width: 154px
+    height: 32px
+
+.page-header__user
+  margin: 0 10px 0 auto
+  padding-top: 8px
+
+.page-header__user-link
+  display: block
+  width: 22px
+  height: 22px
+  background-image: url("../img/sprite.png")
+  background-position: 0 -68px
+  font-size: 0
+
+.page-header--inner .page-header__user-item:first-of-type
+  display: none
+
+.nav
+  position: relative
+
+.nav__toggle
+  position: absolute
+  top: 9px
+  left: 10px
+  z-index: 1
+  width: 25px
+  height: 19px
+  font-size: 0
+  &::before, &::after
+    content: ""
+    position: absolute
+    display: block
+    transition: opacity 0.3s linear, transform 0.3s linear
+  &:hover
+    &::before, &::after
+      opacity: 0.7
+  &:active
+    &::before, &::after
+      opacity: 0.5
+
+.nav__wrapper
+  position: absolute
+  top: 43px
+  width: 100%
+  max-height: 0
+  padding: 0
+  transition: max-height 0.3s linear, box-shadow 0.3s ease-in, padding 0.3s linear
+  overflow: hidden
+  &::after
+    content: ""
+    position: absolute
+    display: block
+    bottom: 26px
+    z-index: 1
+    width: 100%
+    height: 89px
+    background: url("../img/icicles-2.png") repeat-x
+
+.nav__list
+  position: relative
+  z-index: 2
+  padding: 17px 0 18px 0
+  background: #fff
+
+.nav__link
+  display: block
+  padding: 0 10px
+  font-size: 16px
+  line-height: 45px
+  transition: color 0.3s linear
+  &[href]
+    &:hover
+      color: #1e8ae6
+    &:active
+      color: rgba(30, 138, 230, 0.7)
+
+.nav--closed .nav__toggle::before
+  top: 0
+  left: 0
+  width: 25px
+  height: 4px
+  border-radius: 20px
+  background: #1e8ae6
+  box-shadow: 0 8px 0 0 #1e8ae6, 0 16px 0 0 #1e8ae6
+
+.nav--opened
+  .nav__toggle
+    height: 20px
+    &::before, &::after
+      left: 0
+      width: 25px
+      height: 4px
+      background: #1e8ae6
+      box-shadow: none
+    &::before
+      -ms-transform: rotate(45deg)
+      transform: rotate(45deg)
+    &::after
+      -ms-transform: rotate(-45deg)
+      transform: rotate(-45deg)
+  .nav__wrapper
+    max-height: 800px
+    padding-bottom: 89px
+    background: transparent
+    box-shadow: 0 -1px 0 0 #e1e1e1
+    transition: max-height 0.5s linear, box-shadow 0.3s ease-out, padding-bottom 0.1s linear
+
+.nav--nojs
+  -ms-flex-order: 3
+  order: 3
+  .nav__toggle
+    display: none
+  .nav__wrapper
+    position: static
+    max-height: none
+    overflow: auto
