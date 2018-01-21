@@ -24,17 +24,14 @@
 .intro__title
   margin-bottom: 78px
   color: $secondaryColor
-  font-size: 36px
-  line-height: 36px
-  font-weight: 700
+  +font(36px,36px, 700)
   text-align: center
 
 
 .intro__title-accent
   display: block
   padding-top: 17px
-  font-size: 60px
-  line-height: 65px
+  +font(60px, 65px)
   font-family: $secondaryFF
 
 
@@ -49,9 +46,7 @@
 .intro__price
   display: block
   padding-left: 9px
-  font-size: 28px
-  line-height: 36px
-  font-weight: 700
+  +font(28px, 36px, 700)
 
 @media only screen and (min-width: 720px)
   .intro
@@ -70,9 +65,7 @@
 
   .intro__title
     margin-bottom: 101px
-    font-size: 45px
-    line-height: 36px
-    font-weight: 700
+    +font(45px, 36px, 700)
     text-align: left
   
 
@@ -112,15 +105,11 @@
   
 
   .intro__title
-    font-size: 60px
-    line-height: 36px
-    font-weight: 700
-  
+    +font(60px, 36px ,700)
 
   .intro__title-accent
     padding-top: 38px
-    font-size: 80px
-    line-height: 65px
+    +font(80px, 65px)
     font-family: $secondaryFF
   
 
