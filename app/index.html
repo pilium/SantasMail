@@ -14,6 +14,25 @@
     <style body{opacity: 0 overflow-x: hidden} html{background-color: #1a1a1a}></style>
   </head>
   <body class="ishome">
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <nav class="page-header__nav nav nav--closed nav--nojs">
+          <button class="nav__toggle btn btn--nav" type="button">Меню</button>
+          <div class="nav__wrapper">
+            <ul class="nav__list">
+              <li class="nav__item"><a class="nav__link" href="#order">Заказать письмо</a></li>
+              <li class="nav__item"><a class="nav__link" href="payment.html">Оплата</a></li>
+              <li class="nav__item"><a class="nav__link" href="delivery.html">Доставка</a></li>
+              <li class="nav__item"><a class="nav__link" href="desire.html">Загадать желание</a></li>
+              <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+        </nav><a class="page-header__logo"><img src="img/logo.png" width="154" height="32" alt="Почта Мороза"></a>
+        <ul class="page-header__user">
+          <li class="page-header__user-item"><a class="page-header__user-link btn" href="user.html">Личный кабинет</a></li>
+        </ul>
+      </div>
+    </header>
     <div class="main-container">
       <header class="page-header">
         <div class="page-header__wrapper">
@@ -34,6 +53,14 @@
           </ul>
         </div>
       </header>
+      <main class="page-main">
+        <section class="page-main__item intro">
+          <div class="intro__wrapper">
+            <h1 class="intro__title">Настоящее письмо<span class="intro__title-accent">от Деда<br> Мороза</span></h1>
+            <div class="intro__action"><a class="intro__btn btn btn--primary" href="#order">Заказать письмо</a><span class="intro__price">от 290 руб.</span></div>
+          </div>
+        </section>
+      </main>
     </div>
     <script src="js/scripts.min.js"></script>
   </body>

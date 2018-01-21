@@ -33,12 +33,12 @@
   z-index: 10
   transform: translateZ(0)
   width: 100%
-  background: #fff
+  background: $primaryBack
   &::after
-    content: ""
+    content: ''
     position: absolute
-    display: block
     top: 32px
+    display: block
     z-index: 1
     width: 100%
     height: 64px
@@ -46,16 +46,14 @@
     pointer-events: none
 
 .page-header__wrapper
+  +container
   position: relative
   z-index: 2
-  display: -ms-flexbox
   display: flex
-  -ms-flex-wrap: wrap
   flex-wrap: wrap
-  min-width: 320px
-  margin: 0 auto
   padding: 6px 0 8px
-  background: #fff
+  background: $primaryBack
+
 
 .page-header__nav
   width: 100%
@@ -66,118 +64,127 @@
   img
     width: 154px
     height: 32px
+  
+
 
 .page-header__user
   margin: 0 10px 0 auto
   padding-top: 8px
 
+
 .page-header__user-link
   display: block
   width: 22px
   height: 22px
-  background-image: url("../img/sprite.png")
-  background-position: 0 -68px
+  +icons(0 -68px)
   font-size: 0
 
-.page-header--inner .page-header__user-item:first-of-type
-  display: none
 
-.nav
-  position: relative
-
-.nav__toggle
-  position: absolute
-  top: 9px
-  left: 10px
-  z-index: 1
-  width: 25px
-  height: 19px
-  font-size: 0
-  &::before, &::after
-    content: ""
-    position: absolute
-    display: block
-    transition: opacity 0.3s linear, transform 0.3s linear
-  &:hover
-    &::before, &::after
-      opacity: 0.7
-  &:active
-    &::before, &::after
-      opacity: 0.5
-
-.nav__wrapper
-  position: absolute
-  top: 43px
-  width: 100%
-  max-height: 0
-  padding: 0
-  transition: max-height 0.3s linear, box-shadow 0.3s ease-in, padding 0.3s linear
-  overflow: hidden
-  &::after
-    content: ""
-    position: absolute
-    display: block
-    bottom: 26px
-    z-index: 1
-    width: 100%
-    height: 89px
-    background: url("../img/icicles-2.png") repeat-x
-
-.nav__list
-  position: relative
-  z-index: 2
-  padding: 17px 0 18px 0
-  background: #fff
-
-.nav__link
-  display: block
-  padding: 0 10px
-  font-size: 16px
-  line-height: 45px
-  transition: color 0.3s linear
-  &[href]
-    &:hover
-      color: #1e8ae6
-    &:active
-      color: rgba(30, 138, 230, 0.7)
-
-.nav--closed .nav__toggle::before
-  top: 0
-  left: 0
-  width: 25px
-  height: 4px
-  border-radius: 20px
-  background: #1e8ae6
-  box-shadow: 0 8px 0 0 #1e8ae6, 0 16px 0 0 #1e8ae6
-
-.nav--opened
-  .nav__toggle
-    height: 20px
-    &::before, &::after
-      left: 0
-      width: 25px
-      height: 4px
-      background: #1e8ae6
-      box-shadow: none
-    &::before
-      -ms-transform: rotate(45deg)
-      transform: rotate(45deg)
-    &::after
-      -ms-transform: rotate(-45deg)
-      transform: rotate(-45deg)
-  .nav__wrapper
-    max-height: 800px
-    padding-bottom: 89px
-    background: transparent
-    box-shadow: 0 -1px 0 0 #e1e1e1
-    transition: max-height 0.5s linear, box-shadow 0.3s ease-out, padding-bottom 0.1s linear
-
-.nav--nojs
-  -ms-flex-order: 3
-  order: 3
-  .nav__toggle
+.page-header--inner
+  .page-header__user-item:first-of-type
     display: none
-  .nav__wrapper
-    position: static
-    max-height: none
-    overflow: auto
+
+@media only screen and (min-width: 720px)
+  .page-header
+    &::after
+      top: 4px
+      height: 169px
+      background: url("../img/icicles-4.png") repeat-x -131px 0
+    
+  
+
+  .page-header__wrapper
+    padding-top: 7px
+  
+
+  .page-header__logo
+    padding-left: 162px
+  
+
+  .page-header__user
+    margin-right: 12px
+    padding-top: 3px
+  
+
+  .page-header__user-link
+    width: 160px
+    height: auto
+    padding: 0 25px
+    border: 1px dashed $addBorder-3
+    border-radius: 5px
+    background: none
+    color: $addColor
+    font-size: 15px
+    line-height: 33px
+    text-align: center
+    transition: color 0.3s linear
+    &:hover
+      color: fade($addColor, 70%)
+    
+    &:active
+      color: fade($addColor, 40%)
+
+  .page-header--inner
+    .page-header__logo
+      padding-left: 200px
+    
+    .page-header__user-item
+      display: inline-block
+      &:first-of-type
+        display: inline-block
+        margin-right: 30px
+      
+    
+    .page-header__user-link
+      width: auto
+      padding: 0
+      border: none
+      font-size: 16px
+      font-size: 36px
+
+@media only screen and (min-width: 960px)
+  .page-header
+    &::after
+      top: 10px
+    
+  
+
+  .page-header__wrapper
+    justify-content: space-between
+    padding-left: 10px
+    padding-right: 10px
+  
+
+  .nav
+    width: auto
+  
+
+  .page-header__nav
+    order: 2
+  
+
+  .page-header__logo
+    order: 1
+    margin-left: 0
+    padding-left: 0
+  
+
+  .page-header__user
+    order: 3
+    margin-left: 0
+    margin-right: 0
+  
+
+  .page-header--inner
+    .page-header__logo
+      padding-left: 0
+    
+    .page-header__user-item
+      &:first-of-type
+        margin-right: 5px
+  
+@media only screen and (min-width: 1280px)
+  .page-header--inner
+    .page-header__user-item
+      &:first-of-type
+        margin-right: 30px

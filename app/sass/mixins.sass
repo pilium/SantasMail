@@ -1,0 +1,15 @@
+=container
+    min-width: 320px
+    margin: 0 auto
+    @media only screen and (min-width: 720px)
+        min-width: 700px
+
+    @media only screen and (min-width: 960px)
+        width: 940px
+
+    @media only screen and (min-width: 1280px)
+        width: 1260px
+
+=icons( $pos )
+  background-image: url("../img/sprite.png")
+  background-position: $pos

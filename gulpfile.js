@@ -83,18 +83,17 @@ gulp.task('cleansprite', function() {
 
 gulp.task('spritemade', function() {
   var spriteData =
-			gulp.src('app/img/sprite/*.*')
+			gulp.src('app/img/sprite/icons/*.png')
 				.pipe(spritesmith({
-  imgName: '../img/sprite/sprite.png',
-  cssName: '_sprite.sass',
-  padding: 15,
-  cssFormat: 'sass',
-  algorithm: 'binary-tree',
-
+          imgName: '../img/sprite/sprite.png',
+          cssName: '_sprite.sass',
+          padding: 5,
+          cssFormat: 'sass',
+          algorithm: 'binary-tree'
 }));
-
   spriteData.img.pipe(rename('sprite.png')).pipe(gulp.dest('app/img/sprite/')); // путь, куда сохраняем картинку
   spriteData.css.pipe(gulp.dest('app/sass/')); // путь, куда сохраняем стили
+  return(spriteData.img, spriteData.css);
 });
 gulp.task('sprite', ['cleansprite', 'spritemade']);
 
