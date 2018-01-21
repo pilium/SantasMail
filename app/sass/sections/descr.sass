@@ -1,0 +1,103 @@
+.description__wrapper
+    padding: 15px 10px 0
+
+    +container
+
+
+.description__title
+    font-family: $secondaryFF
+
+    text-align: center
+
+    color: $addColor-2
+
+    +font(30px, 40px)
+
+
+.description__img
+    text-align: center
+    img
+        width: 300px
+        height: 336px
+
+
+
+.description__descr
+    margin-bottom: 17px
+    &--accent
+        margin-top: -17px
+
+        +font(18px, 28px, 700)
+
+    &:last-of-type
+        margin-bottom: 0
+
+@media only screen and (min-width: 720px)
+    .description
+        padding-bottom: 36px
+    
+    
+    .description__wrapper
+        display: flex
+
+        padding: 22px 10px 0
+
+        flex-wrap: wrap
+    
+    
+    .description__title
+        font-family: $secondaryFF
+
+        width: 100%
+        margin-bottom: 9px
+        padding-left: 14px
+
+        +font(36px, 60px)
+        br
+            display: none
+        
+                
+        
+    .description__img
+        text-align: left
+        img
+            width: 300px
+            height: 336px
+        
+                
+        
+    .description__text
+        padding-top: 45px
+        padding-left: 19px
+
+        flex-grow: 1
+        flex-basis: 380px
+
+@media only screen and (min-width: 960px)
+    .description__wrapper
+        padding-top: 41px
+    
+    .description__title
+        font-size: 48px
+        line-height: 60px
+
+        margin-bottom: 24px
+    
+    .description__img
+        text-align: left
+        img
+            width: 391px
+            height: 437px
+        
+    .description__descr
+        font-size: 18px
+        line-height: 28px
+        &--accent
+            +font(24px, 38px, 700)
+        
+    .description__text
+        padding-top: 51px
+        padding-left: 8px
+    
+    .description
+        padding-bottom: 0
