@@ -21,17 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
  	    btnOpen = document.querySelector(".page-header__user-link"),
  	    btnClose = document.querySelector(".popup__btn--close"),
 		overlay = document.querySelector(".overlay");
-		 console.log(popUp);
-		 console.log(btnOpen);
-		 console.log(btnClose);
-		 console.log(overlay);
-		 
+
  	btnOpen.addEventListener("click", function(event){
  	    event.preventDefault();
  	    popUp.classList.toggle("popup--opened");
  		overlay.classList.toggle("overlay--opened");
- 	    nav.classList.remove("nav--opened");
- 	    nav.classList.add("nav--closed");
+ 	    // nav.classList.remove("nav--opened");
+ 	    // nav.classList.add("nav--closed");
  	});
  	btnClose.addEventListener("click", function(){
  	  if(popUp.classList.contains("popup--opened")){
@@ -40,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
  		if(overlay.classList.contains("overlay--opened")){
  			overlay.classList.remove("overlay--opened");
  		}
- 	});
+	 });
+	
  	window.addEventListener("keydown", function(event){
  	  if(event.keyCode == 27){
 			if(popUp.classList.contains("popup--opened")){
