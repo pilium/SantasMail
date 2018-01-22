@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
  	btnOpen.addEventListener("click", function(event){
  	    event.preventDefault();
  	    popUp.classList.toggle("popup--opened");
- 		overlay.classList.toggle("overlay--opened");
+ 			overlay.classList.toggle("overlay--opened");
  	    // nav.classList.remove("nav--opened");
  	    // nav.classList.add("nav--closed");
  	});

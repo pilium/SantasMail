@@ -1,23 +1,23 @@
 .popup
   position: fixed
-  top: -1500px
+  top: 0
   z-index: 20
   padding: 40px 5px
   width: 100vw
   height: 80vh
+  opacity:  0
+  perspective: 120px
   max-width: 100%
   background: $primaryBack
-  transition: top 0.5s linear
+  transition: opacity 1s ease-in-out
   text-align: center
   &--opened
-    top: 0
-  
-
+    opacity: 1
 
 .popup__btn--close
   position: absolute
-  top: 6px
-  right: 6px
+  top: 15px
+  right: 15px
   width: 40px
   height: 40px
   border-radius: 50%
