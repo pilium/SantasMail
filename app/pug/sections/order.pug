@@ -1,0 +1,137 @@
+section#order.page-main__item.order
+	.order__wrapper
+		h2.order__title Оформление доставки
+		form.order__form(method="post" action="#")
+			.order__group.order__group--contacts
+				.order__subgroup.order__subgroup--name
+					label.order__label(for="name")
+						| Имя ребёнка
+						sup *
+						span.order__comment.order__comment--hid
+							| Например: Антошка, Саша или Мариночка
+					input#name.order__field(type="text" name="name" placeholder="Антошка, Саша или Мариночка" required="")
+				.order__subgroup.order__subgroup--sex
+					input#boy.order__radio(type="radio" name="sex" value="boy" checked="")
+					label.order__label.order__label--sex.order__label--boy(for="boy")
+						span.order__sex.order__sex--boy Мальчик
+					input#girl.order__radio(type="radio" name="sex" value="girl")
+					label.order__label.order__label--sex.order__label--girl(for="girl")
+						span.order__sex.order__sex--girl Девочка
+				.order__subgroup
+					label.order__label(for="fullname")
+						| ФИО ребенка
+						sup *
+						span.order__comment В дательном падеже
+					input#fullname.order__field(type="text" name="fullname" placeholder="Например: Иванову Ване" required="")
+				.order__subgroup
+					label.order__label(for="parent")
+						| Имя родителя
+						sup *
+						span.order__comment Заказчика
+					input#parent.order__field(type="text" name="parent" placeholder="Взрослого, для связи в случае выигрыша IPhone 6" required="")
+				.order__subgroup
+					label.order__label(for="address")
+						| Полный адрес
+						sup *
+						span.order__comment Куда доставить
+					input#address.order__field(type="text" name="address" placeholder="Пример: 135999, Москва, ул. Ленина, д.10, кв.5" required="")
+				.order__subgroup
+					label.order__label(for="email")
+						| Email
+						sup *
+					input#email.order__field(type="email" name="email" placeholder="На него мы отправим информацию о заказе" required="")
+				.order__subgroup
+					label.order__label(for="type")
+						| Вид письма
+						sup *
+					select#type.order__select(name="type" required="")
+						option(value="") Обычное
+						option(value="2") Срочное
+				.order__subgroup.order__subgroup--link
+					label.order__label(for="link")
+						| Ссылка на пост
+						span.order__comment
+							| Ссылка на пост для участия в розыгрыше IPhone 6
+					input#link.order__field(type="text" name="link" placeholder="На него мы отправим информацию о заказе")
+			.order__group.order__group--text
+				h3.order__group-title Выберите текст письма
+				p.order__group-descr
+					| Вы можете его заменить и подкорректировать
+			.order__group.order__group--accordeon.accordeon
+				.accordeon__inner
+					input#tab-1(type="radio" name="tabs" value="1" checked="")
+					label.accordeon__label(for="tab-1") Письмо №1
+					.accordeon__tab
+						p.accordeon__descr(contenteditable="true")
+							span.accordeon__par
+								| Здравствуй, !
+							span.accordeon__par
+								| Ты пока еще не научился читать, но мне так хочется поздравить
+								| тебя с самым удивительным праздником Новым Годом!
+								br
+								|                       Новый Год! Однажды, когда ты немножко подрастешь, то
+								|                       узнаешь, какая это удивительная, волшебная, сказочная пора!
+								|                       Да и сейчас, лежа в своей уютной кроватке, ты видишь развешанные
+								|                       по комнате разноцветные гирлянды и мишуру. Тебе нравится
+								|                       смотреть на мигающие огоньки и красивые, блестящие игрушки….
+								|                       А еще тебе показывают картинки с добрым стариком с длинной
+								|                       белой бородой. Рядом с ним - улыбающаяся девушка в сверкающей
+								|                       короне. Это мы, Дедушка Мороз и Снегурочка - твои новые
+								|                       друзья! Теперь каждый Новый год мы будем приезжать к тебе
+								|                       домой с подарками!
+							span.accordeon__par
+								| Еще раз с Новым Годом тебя, малыш! Расти здоровым, красивым
+								| и веселым мальчиком! Слушайся родных, будь добр к людям и
+								| зверятам! А пока можно просто побыть славной крошкой! Ведь
+								| та радость, которую ты приносишь своим родным – самый лучший
+								| подарок на свете!
+							span.accordeon__par.accordeon__par--hid
+								| Дедушка Мороз
+						.accordeon__items
+							.accordeon__item.slider__item.item
+								figure.accordeon__img
+									picture
+										source(media="(min-width: 720px)" srcset="img/letter-2.png")
+										img(src="img/letter.png" width="274" height="382" alt="Письмо")
+					input#tab-2(type="radio" name="tabs" value="2")
+					label.accordeon__label(for="tab-2") Письмо №2
+					.accordeon__tab
+						p.accordeon__descr(contenteditable="true")
+							span.accordeon__par
+								| Здравствуй, !
+							span.accordeon__par
+								| Ты пока еще не научился читать, но мне так хочется поздравить
+								| тебя с самым удивительным праздником Новым Годом!
+								br
+								|                       Новый Год! Однажды, когда ты немножко подрастешь, то узнаешь,
+								|                       какая это удивительная, волшебная, сказочная пора! Да и сейчас,
+								|                       лежа в своей уютной кроватке, ты видишь развешанные по
+								|                       комнате разноцветные гирлянды и мишуру. Тебе нравится смотреть
+								|                       на мигающие огоньки и красивые, блестящие игрушки…. А еще
+								|                       тебе показывают картинки с добрым стариком с длинной белой
+								|                       бородой. Рядом с ним - улыбающаяся девушка в сверкающей короне.
+								|                       Это мы, Дедушка Мороз и Снегурочка - твои новые друзья! Теперь
+								|                       каждый Новый год мы будем приезжать к тебе домой с подарками!
+					input#tab-3(type="radio" name="tabs" value="3")
+					label.accordeon__label(for="tab-3") Письмо №3
+					.accordeon__tab
+						p.accordeon__descr(contenteditable="true")
+							span.accordeon__par
+								| Здравствуй, !
+					input#tab-4(type="radio" name="tabs" value="4")
+					label.accordeon__label(for="tab-4") Свой текст
+					.accordeon__tab
+						p.accordeon__descr(contenteditable="true")
+							span.accordeon__par
+								| Здравствуй, username!
+			.order__group.order__group--order
+				p.order__det
+					span.order__warn Ваш заказ:
+					|                 письмо (290 руб.) + доставка (0 руб.)
+				.order__totals
+					p.order__sum Итого: 290 руб.
+					p.order__cons
+						| Нажимая кнопку «Заказать письмо», я даю согласие на обработку
+						| моих персональных данных.
+				button.order__btn.order__send.btn.btn--primary(type="submit")
+					| Заказать письмо
