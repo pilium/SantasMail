@@ -29,7 +29,7 @@
           </div>
         </nav><a class="page-header__logo"><img src="img/logo.png" width="154" height="32" alt="Почта Мороза"></a>
         <ul class="page-header__user">
-          <li class="page-header__user-item"><a class="page-header__user-link btn" href="user.html">Личный кабинет</a></li>
+          <li class="page-header__user-item"><a class="page-header__user-link btn" href="#">Личный кабинет</a></li>
         </ul>
       </div>
     </header>
@@ -49,7 +49,7 @@
             </div>
           </nav><a class="page-header__logo"><img src="img/logo.png" width="154" height="32" alt="Почта Мороза"></a>
           <ul class="page-header__user">
-            <li class="page-header__user-item"><a class="page-header__user-link btn" href="user.html">Личный кабинет</a></li>
+            <li class="page-header__user-item"><a class="page-header__user-link btn" href="#">Личный кабинет</a></li>
           </ul>
         </div>
       </header>
@@ -252,6 +252,22 @@
           </div>
         </section>
       </main>
+      <div class="popup">
+        <button class="popup__btn popup__btn--close btn" type="button">Закрыть</button>
+        <h5 class="popup__title">Вход в кабинет</h5>
+        <div class="popup__wrapper">
+          <p class="popup__descr">
+            Введите ваш Email адрес который вы вводили при оформлении письма.
+            Пароль вам отправлен на вашу почту.
+          </p>
+          <form class="popup__form" action="#" method="post">
+            <input class="popup__email popup__field" type="email" name="email" placeholder="Email адрес">
+            <input class="popup__password popup__field" type="password" name="pass" placeholder="Пароль">
+            <button class="popup__btn popup__btn--send btn btn--primary" type="submit">Войти</button><a class="popup__link" href="#">Забыли пароль</a>
+          </form>
+        </div>
+      </div>
+      <div class="overlay"></div>
       <footer class="page-footer">
         <div class="page-footer__wrapper">
           <p class="page-footer__descr">© 2017, ПочтаМороза.ру</p>
