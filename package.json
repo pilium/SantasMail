@@ -32,6 +32,6 @@
     "vinyl-ftp": "^0.6.0"
   },
   "dependencies": {
-    "lory.js": "^2.3.4"
+    "in-view": "^0.6.1"
   }
 }

@@ -2,19 +2,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // MOBILE MENU
 
-    // var nav = document.querySelector(".nav"),
-    //     navToggle = document.querySelector(".btn--nav");
-    
-    // nav.classList.remove("nav--nojs");
-    // navToggle.addEventListener("click", function(){
-    //     if(nav.classList.contains("nav--closed")){
-    //         nav.classList.remove("nav--closed");
-    //         nav.classList.add("nav--opened");
-    //     } else {
-    //         nav.classList.remove("nav--opened");
-    //         nav.classList.add("nav--closed");
-    //     }
-    // });
+		var nav = document.querySelector(".nav"),
+		    navToggle = document.querySelector(".btn--nav");
+		
+		nav.classList.remove("nav--nojs");
+		navToggle.addEventListener("click", function(){
+		    if(nav.classList.contains("nav--closed")){
+		        nav.classList.remove("nav--closed");
+		        nav.classList.add("nav--opened");
+		    } else {
+		        nav.classList.remove("nav--opened");
+		        nav.classList.add("nav--closed");
+		    }
+		});
 
     // POPUP
  	var popUp = document.querySelector(".popup"),
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
  			overlay.classList.remove("overlay--opened");
  		}
 	 });
-	
+
  	window.addEventListener("keydown", function(event){
  	  if(event.keyCode == 27){
 			if(popUp.classList.contains("popup--opened")){
@@ -47,6 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	 			overlay.classList.remove("overlay--opened");
 	 		}
  	  }
- 	});
-
+	 });
+	 
 });
