@@ -5,7 +5,7 @@
 		p.popup__descr
 			| Введите ваш Email адрес который вы вводили при оформлении письма.
 			| Пароль вам отправлен на вашу почту.
-		form.popup__form(action="#" method="post")
+		form.popup__form(action="#" method="get")
 			input.popup__email.popup__field(type="email" name="email" placeholder="Email адрес")
 			input.popup__password.popup__field(type="password" name="pass" placeholder="Пароль")
 			button.popup__btn.popup__btn--send.btn.btn--primary(type="submit")

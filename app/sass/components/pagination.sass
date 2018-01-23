@@ -1,0 +1,156 @@
+.paginator
+  font-size: 0
+  width: 350px
+  margin: 0 auto
+
+
+.paginator__item
+  display: inline-block
+  vertical-align: top
+  margin-right: 6px
+  padding: 10px 13px
+  width: 20px
+  height: 20px
+  border: 1px solid #1e8ae6
+  border-radius: 5px
+  +font(16px, 21px)
+  text-align: center
+  color: #1e8ae6
+  &:last-of-type
+    margin-right: 0
+  &:hover
+    border-color: #F45AB8
+
+
+  &--prev
+    font-size: 0
+    position: relative
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      width: 13px
+      height: 25px
+      +icons(0 -182px)
+    
+  
+  &--next
+    font-size: 0
+    position: relative
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      width: 13px
+      height: 25px
+      +icons(0 -152px)
+      left: 16px
+    
+  
+  &--current
+    background: #1e8ae6
+    color: #fff
+  
+  &--hid
+    display: none
+
+
+@media only screen and (min-width: 720px)
+  .paginator
+    font-size: 0
+    width: 680px
+    margin: 0 auto
+    text-align: center
+
+
+  .paginator__item
+    display: inline-block
+    vertical-align: top
+    margin-right: 25px
+    padding: 0
+    width: 60px
+    height: 60px
+    border: 1px solid #1e8ae6
+    border-radius: 5px
+    +font(18px, 60px)
+    text-align: center
+    color: #1e8ae6
+    &:last-of-type
+      margin-right: 0
+
+    &--prev
+      font-size: 0
+      position: relative
+      &::before
+        left: 20px
+        top: 18px
+      
+    
+    &--next
+      font-size: 0
+      position: relative
+      &::before
+        left: 22px
+        top: 18px
+
+
+    &--current
+      background: #1e8ae6
+      color: #fff
+
+
+@media only screen and (min-width: 960px)
+  .paginator--admin
+    font-size: 0
+    width: auto
+    margin: 0
+    margin-left: 30px
+    text-align: left
+    .paginator__item
+      display: inline-block
+      vertical-align: top
+      margin-right: 6px
+      padding: 10px 13px
+      width: 45px
+      height: 45px
+      border: 1px solid #1e8ae6
+      border-radius: 5px
+      +font(16px, 21px)
+      color: #1e8ae6
+      &:last-of-type
+        margin-right: 0
+      
+      &--prev
+        font-size: 0
+        position: relative
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          width: 13px
+          height: 25px
+          top: 10px
+          left: 14px
+          +icons(0 -182px)
+        
+      
+      &--next
+        font-size: 0
+        position: relative
+        &::before
+          content: ''
+          display: block
+          position: absolute
+          top: 10px
+          width: 13px
+          height: 25px
+          +icons(0 -152px)
+          left: 16px
+        
+      
+      &--current
+        background: #1e8ae6
+        color: #fff
+      
+      &--hid
+        display: none

@@ -9,6 +9,8 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   rename = require('gulp-rename'),
   del = require('del'),
+  babel = require("babel-core"),
+  babel = require('gulp-babel'),
   imagemin = require('gulp-imagemin'),
   spritesmith = require('gulp.spritesmith'),
   cache = require('gulp-cache'),
@@ -37,7 +39,10 @@ gulp.task('js', function() {
   return gulp.src([
     'app/js/common.js' // Всегда в конце
   ])
-		.pipe(plumber())
+    .pipe(plumber())
+    .pipe(babel({
+        presets: ['env']
+    }))
 		.pipe(concat('scripts.min.js'))
 		.pipe(uglify()) // Минимизировать весь js (на выбор)
 		.pipe(gulp.dest('app/js'))

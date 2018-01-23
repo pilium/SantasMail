@@ -37,10 +37,14 @@ body
     font-size: $primaryFS
     font-weight: $primaryFW
     line-height: $primaryLH
-    overflow-x: hidden
+
     position: relative
 
+    overflow-x: hidden
+
+
     min-width: 320px
+
 
     opacity: 1
     color: $primaryColor
@@ -58,6 +62,7 @@ ul
     margin: 0
     padding: 0
 
+
     list-style: none
 
 p
@@ -65,6 +70,7 @@ p
 
 a
     text-decoration: none
+
 
     color: inherit
   
@@ -95,19 +101,23 @@ figure
 .img-responsive
     display: block
 
+
     max-width: 100%
     height: auto
 
 .visually-hidden
     position: absolute
 
+
     overflow: hidden
     clip: rect(0 0 0 0)
+
 
     width: 1px
     height: 1px
     margin: -1px
     padding: 0
+
 
     border: 0
 
@@ -116,24 +126,31 @@ button
     outline: none
 
 .btn
-  display: inline-block
-  vertical-align: top
-  background: none
-  cursor: pointer
-  outline: none
-  border: none
+    display: inline-block
 
-.btn--primary
-  padding: 17px 42px
-  border-radius: 5px
-  background: #f74d45
-  box-shadow: 0px 3px 0px 0px #c63f3d, inset 0px 37px 0px 0px rgba(255, 255, 255, 0.09)
-  color: #fff
-  +font(24px, 36px, 700)
-  font-family: "PT Sans", Arial, sans-serif
-  transition: background 0.3s linear
-  &:hover
-    background: #fe3128
-  &:active
-    background: rgba(254, 49, 40, 0.8)
+    cursor: pointer
+    vertical-align: top
 
+    border: none
+    outline: none
+    background: none
+
+    .btn--primary
+        font-family: 'PT Sans', Arial, sans-serif
+
+        padding: 17px 42px
+
+        transition: background .3s linear
+
+        color: #fff
+        border-radius: 5px
+        background: #f74d45
+        box-shadow: 0 3px 0 0 #c63f3d, inset 0 37px 0 0 rgba(255, 255, 255, .09)
+
+        +font(24px, 36px, 700)
+        &:hover
+            background: #fe3128
+            &:active
+                background: rgba(254, 49, 40, .8)
+
+            

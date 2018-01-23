@@ -1,0 +1,202 @@
+section.page-main__item.features.features--inner.features--desire
+	.features__wrapper
+		h2.features__title
+			| Письмо
+			br
+			|  Деду Морозу
+		p.features__descr
+			| Поделись своими желаниями, вдруг исполнится!
+		section.desire
+			form.desire__form(action="desire.php" method="post")
+				h2.desire__title
+					| Дорогой,
+					span.desire__title-acc
+						| Дедушка Мороз!
+				.desire__group.desire__group--contacts
+					.desire__subgroup.desire__subgroup--name
+						input#name.desire__field(type="text" name="name" placeholder="Ваше имя" required="")
+					.desire__subgroup.desire__subgroup--sex
+						input#boy.desire__radio(type="radio" name="sex" value="boy" checked="")
+						label.desire__label.desire__label--sex.desire__label--boy(for="boy")
+							span.desire__sex.desire__sex--boy Мальчик
+						input#girl.desire__radio(type="radio" name="sex" value="girl")
+						label.desire__label.desire__label--sex.desire__label--girl(for="girl")
+							span.desire__sex.desire__sex--girl Девочка
+					.desire__subgroup
+						input#from.desire__field(type="text" name="from" placeholder="Откуда вы" required="")
+					.desire__subgroup
+						input#email.desire__field(type="email" name="email" placeholder="Ваш E-mail" required="")
+				.desire__group.desire__group--message
+					.desire__subgroup
+						textarea.desire__message(name="message" placeholder="Напишите письмо Дедушке Морозу")
+				.desire__group.desire__group--action
+					.desire__subgroup.desire__subgroup--social
+						.desire__social.social
+					.desire__subgroup
+						button.desire__btn.desire__send.btn.btn--primary(type="submit", name="submit")
+							| Отправить
+section.page-main__item.letter.letter--inner.letter--desire
+	.letter__wrapper
+		h2.letter__title Последние комментарии
+		.comment.letter__items
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--girl
+					|               Катя, г. Саратов
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Здравствуй Дедушка Мороз.
+					span.comment__item-part
+						| Меня зовут Катя я в этом году вела себя очень хорошо. Я хочу чтобы
+						| ты мне подарил : телефон айфон 6s белого цвета и к нему силиконовый
+						| чехол кислотного зелёного цвета
+					span.comment__item-part
+						| Заранее спасибо С НОВЫМ ГОДОМ!!!!!2017
+					span.comment__item-part
+						| Желаю счастья, здоровья и добра!
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--boy
+					|               Миша, г. Москва
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Здравствуйте, Дедушка Мороз!
+					span.comment__item-part
+						| Меня зовут Ксюша, я учусь в 3 классе. Я люблю читать, писать и
+						| рисовать. Ещё я люблю животных, и у меня дома есть щенок, его
+						| зовут Туман. Также я люблю петь и танцевать. Ещё я и моя мама
+						| любим цветы.
+					span.comment__item-part
+						| Дорогой Дедушка Мороз, можно попросить у Вас на Новый Год
+						| энциклопедию про животных. Заранее спасибо)
+					span.comment__item-part
+						| И с наступающим Вас Новым Годом!
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--boy
+					|               Миша, г. Москва
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Дедушка мороз я хочу в этом году новый телефон. Что бы он был
+						| сенсорный и экран у него был не маленький, а если захочешь подари
+						| мне Ippon и наушники.
+					span.comment__item-part
+						| Заранее СПАСИБО!!!
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--girl
+					|               Катя, г. Саратов
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Здравствуй Дедушка Мороз.
+					span.comment__item-part
+						| Меня зовут Катя я в этом году вела себя очень хорошо. Я хочу чтобы
+						| ты мне подарил : телефон айфон 6s белого цвета и к нему силиконовый
+						| чехол кислотного зелёного цвета
+					span.comment__item-part
+						| Заранее спасибо С НОВЫМ ГОДОМ!!!!!2017
+					span.comment__item-part
+						| Желаю счастья, здоровья и добра!
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--boy
+					|               Миша, г. Москва
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Здравствуйте, Дедушка Мороз!
+					span.comment__item-part
+						| Меня зовут Ксюша, я учусь в 3 классе. Я люблю читать, писать и
+						| рисовать. Ещё я люблю животных, и у меня дома есть щенок, его
+						| зовут Туман. Также я люблю петь и танцевать. Ещё я и моя мама
+						| любим цветы.
+					span.comment__item-part
+						| Дорогой Дедушка Мороз, можно попросить у Вас на Новый Год
+						| энциклопедию про животных. Заранее спасибо)
+					span.comment__item-part
+						| И с наступающим Вас Новым Годом!
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--boy
+					|               Миша, г. Москва
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Дедушка мороз я хочу в этом году новый телефон. Что бы он был
+						| сенсорный и экран у него был не маленький, а если захочешь подари
+						| мне Ippon и наушники.
+					span.comment__item-part
+						| Заранее СПАСИБО!!!
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--girl
+					|               Катя, г. Саратов
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Здравствуй Дедушка Мороз.
+					span.comment__item-part
+						| Меня зовут Катя я в этом году вела себя очень хорошо. Я хочу чтобы
+						| ты мне подарил : телефон айфон 6s белого цвета и к нему силиконовый
+						| чехол кислотного зелёного цвета
+					span.comment__item-part
+						| Заранее спасибо С НОВЫМ ГОДОМ!!!!!2017
+					span.comment__item-part
+						| Желаю счастья, здоровья и добра!
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--boy
+					|               Миша, г. Москва
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Здравствуйте, Дедушка Мороз!
+					span.comment__item-part
+						| Меня зовут Ксюша, я учусь в 3 классе. Я люблю читать, писать и
+						| рисовать. Ещё я люблю животных, и у меня дома есть щенок, его
+						| зовут Туман. Также я люблю петь и танцевать. Ещё я и моя мама
+						| любим цветы.
+					span.comment__item-part
+						| Дорогой Дедушка Мороз, можно попросить у Вас на Новый Год
+						| энциклопедию про животных. Заранее спасибо)
+					span.comment__item-part
+						| И с наступающим Вас Новым Годом!
+			article.comment__item
+				h3.comment__item-author
+					span.comment__item-avatar.comment__item-avatar--girl
+					|               Катя, г. Саратов
+				p.comment__item-date 27 декабря 2016
+				p.comment__item-descr
+					span.comment__item-part
+						| Здравствуй Дедушка Мороз.
+					span.comment__item-part
+						| Меня зовут Катя я в этом году вела себя очень хорошо. Я хочу чтобы
+						| ты мне подарил : телефон айфон 6s белого цвета и к нему силиконовый
+						| чехол кислотного зелёного цвета
+					span.comment__item-part
+						| Заранее спасибо С НОВЫМ ГОДОМ!!!!!2017
+					span.comment__item-part
+						| Желаю счастья, здоровья и добра!
+		.paginator
+			a.paginator__item.paginator__item--prev(href="#") Назад
+			a.paginator__item.paginator__item--current(href="#") 1
+			a.paginator__item(href="#") 2
+			a.paginator__item(href="#") 3
+			a.paginator__item.paginator__item--hid(href="#") 4
+			a.paginator__item.paginator__item--dots.paginator__item--hid(href="#") ...
+			a.paginator__item(href="#") 55
+			a.paginator__item.paginator__item--next(href="#") Вперед
+footer.page-footer.page-footer--inner
+	.page-footer__wrapper
+		p.page-footer__descr
+			| © 2017, ПочтаМороза.ру
+		p.page-footer__descr
+			| moroz@pochtamoroza.ru
+		p.page-footer__descr
+			| г.Москва, ул. Медовый переулок, д. 5, стр.1
+include ../modules/popup
+
