@@ -1,0 +1,51 @@
+section.page-main__item.features.features--inner.features--payment
+    .features__wrapper
+        h2.features__title Все способы оплаты онлайн
+        p.features__descr
+            | Мы осуществляем прием платежей через платежного агрегатора ROBOKASSA
+        p.features__descr.features__descr--sec
+            | ROBOKASSA — это сервис, позволяющий покупателям производить оплату
+            | товаров в интернете в любой электронной валюте, с помощью смс-сообщений,
+            | через систему денежных переводов Contact, через терминалы мгновенной оплаты,
+            | а также с помощью банковских карт.  Т.е., оплатить заказ можно любым из
+            | наиболее удобных для вас способов.
+section.page-main__item.letter.letter--inner.letter--payment
+    .letter__wrapper
+        h2.letter__title Как оплатить заказ?
+        p.letter__descr
+            | После оформления заказа Вы переходите на страницу оплаты, где можете
+            | выбрать наиболее приемлемый способ оплаты.
+        p.letter__descr.letter__descr--pop
+            strong.letter__warn
+                | Самые популярные методы оплаты:
+        .letter__items
+            a.letter__item.letter__item--visa(href="#") Visa
+            a.letter__item.letter__item--maestro(href="#") Maestro
+            a.letter__item.letter__item--master(href="#") MasterCard
+            a.letter__item.letter__item--yandex(href="#") Yandex
+            a.letter__item.letter__item--web(href="#") WebMoney
+            a.letter__item.letter__item--rbk(href="#") RBK Money
+        p.letter__descr.letter__descr--robo
+            strong.letter__accent
+                | ROBOKASSA
+            |           - это высоконадежный сервис по приему платежей. Существует с 2003 года.
+            |           Прием платежей происходит через защищенное безопасное соединение.
+            |           ЗАО «Центр Интернет платежей» прошел сертификацию на соответствие
+            |           стандарту PCI DSS. Данный сертификат подтверждает, что применяемые
+            |           технологии, регламентирующие сохранность держателей карт, соответствуют
+            |           самым строгим требованиям.
+        a.letter__send.btn.btn--primary(href="index.html#order") Заказать письмо
+.popup
+    button.popup__btn.popup__btn--close.btn(type="button") Закрыть
+    h5.popup__title Вход в кабинет
+    .popup__wrapper
+        p.popup__descr
+            | Введите ваш Email адрес который вы вводили при оформлении письма.
+            | Пароль вам отправлен на вашу почту.
+        form.popup__form(action="#" method="post")
+            input.popup__email.popup__field(type="email" name="email" placeholder="Email адрес")
+            input.popup__password.popup__field(type="password" name="pass" placeholder="Пароль")
+            button.popup__btn.popup__btn--send.btn.btn--primary(type="submit")
+                | Войти
+        a.popup__link(href="#") Забыли пароль
+.overlay

@@ -1,0 +1,49 @@
+section.page-main__item.features.features--inner
+    .features__wrapper
+        h2.features__title Как доставляем письма?
+        figure.features__img
+            picture
+                source(media="(min-width: 960px)" srcset="img/letters-960.png")
+                img(src="img/letters.png" width="297" height="328" alt="Письма от Деда Мороза")
+        ul.features__items.features__items--first
+            li.features__item
+                | Почта России
+                span.features__item-comment
+                    | простое или заказное письмо (+100 руб.)
+            li.features__item
+                | Получение заказного письма
+                span.features__item-comment
+                    | Для получения заказного письма на почте необходим паспорт
+                    | (и свидетельство о рождении, если письмо адресовано несовершеннолетнему)
+section.page-main__item.letter.letter--inner
+    .letter__wrapper
+        h2.letter__title Не получили письмо? Напишите нам!
+        p.letter__descr
+            | Если Вы не получите письмо 
+            strong.letter__warn до 21 декабря
+            | ,
+            |           а заказ был оформлен 
+            strong.letter__warn не позже 10 декабря
+            | ,
+            |           не волнуйтесь. Просто напишите нам об этом, и мы отправим письмо еще раз
+            |           совершенно бесплатно!
+        p.letter__descr
+            strong.letter__warn
+                | Ни один ребенок не останется без сюрприза!
+        p.letter__descr
+            | Наш email: 
+            a.letter__link(href="mailto:moroz@pochtamoroza.ru")  moroz@pochtamoroza.ru
+.popup
+    button.popup__btn.popup__btn--close.btn(type="button") Закрыть
+    h5.popup__title Вход в кабинет
+    .popup__wrapper
+        p.popup__descr
+            | Введите ваш Email адрес который вы вводили при оформлении письма.
+            | Пароль вам отправлен на вашу почту.
+        form.popup__form(action="#" method="post")
+            input.popup__email.popup__field(type="email" name="email" placeholder="Email адрес")
+            input.popup__password.popup__field(type="password" name="pass" placeholder="Пароль")
+            button.popup__btn.popup__btn--send.btn.btn--primary(type="submit")
+                | Войти
+        a.popup__link(href="#") Забыли пароль
+.overlay
