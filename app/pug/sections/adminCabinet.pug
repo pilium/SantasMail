@@ -1,0 +1,364 @@
+section.page-main__item.admin
+	.admin__wrapper
+		h2.admin__title Кабинет администратора
+		section.letters
+			.letters__head
+				ul.letters__sort
+					li.letters__sort-item
+						| Сортировка
+					li.letters__sort-item
+						a.letters__link.letters__link--current(href="#") по дате
+					li.letters__sort-item
+						a.letters__link(href="#") по имени
+					li.letters__sort-item
+						a.letters__link(href="#") по номеру заказа
+				ul.letters__sort
+					li.letters__sort-item
+						| Показывать
+					li.letters__sort-item
+						a.letters__link.letters__link--current(href="#") 50
+					li.letters__sort-item
+						a.letters__link(href="#") 100
+					li.letters__sort-item
+						a.letters__link(href="#") 500
+				form.letters__search(method="get" action="#")
+					input.letters__field(type="search" name="search" placeholder="Поиск")
+			form.letters__form(method="post" action="#")
+				table.letters__items
+					thead.letters__items-head
+						tr
+							th.letters__item
+							th.letters__item №
+							th.letters__item Адрес
+							th.letters__item
+								| Имя
+								br
+								|  ребенка
+							th.letters__item
+								| ФИО
+								br
+								|  ребенка
+							th.letters__item
+								| Имя
+								br
+								|  родителя
+							th.letters__item Email
+							th.letters__item Тип
+							th.letters__item Текст
+							th.letters__item Сумма
+							th.letters__item Статус оплаты
+					tbody.letters__items-body
+						tr
+							td.letters__item.letters__item--check
+								input#1.letters__checkbox(type="checkbox" name="letter" value="1")
+								label.letters__label(for="1")
+							td.letters__item.letters__item--number
+								a.letters__link(href="#") 1
+							td.letters__item.letters__item--address
+								| 681003,
+								br
+								|  Комсомольск-на-амуре, аллея труда, дом 57/4,кВ. 104
+							td.letters__item
+								| Егор
+							td.letters__item
+								| Алленова Маргарита
+							td.letters__item
+								| Алленову Егору
+							td.letters__item
+								| Margaritaal@
+							td.letters__item
+								| Обычное
+							td.letters__item
+								a.letters__link(href="#") Текст
+								.letters__letter.visually-hidden
+									.letters__text(contenteditable="true")
+										span.letters__text-part
+											| Здравствуй, Егор!
+										span.letters__text-part
+											| Ты пока еще не научился читать, но мне так хочется
+											| поздравить тебя с самым удивительным праздником Новым Годом!
+											| Новый Год! Однажды, когда ты немножко подрастешь, то
+											| узнаешь, какая это удивительная, волшебная, сказочная
+											| пора! Да и сейчас, лежа в своей уютной кроватке, ты видишь
+											| развешанные по комнате разноцветные гирлянды и мишуру.
+											| Тебе нравится смотреть на мигающие огоньки и красивые,
+											| блестящие игрушки…. А еще тебе показывают картинки с
+											| добрым стариком с длинной белой бородой. Рядом с ним
+											| - улыбающаяся девушка в сверкающей короне. Это мы,
+											| Дедушка Мороз и Снегурочка - твои новые друзья! Теперь
+											| каждый Новый год мы будем приезжать к тебе домой с подарками!
+										span.letters__text-part
+											| Еще раз с Новым Годом тебя, малыш! Расти здоровым, красивым
+											| и веселым мальчиком! Слушайся родных, будь добр к людям
+											| и зверятам! А пока можно просто побыть славной крошкой!
+											| Ведь та радость, которую ты приносишь своим родным – самый
+											| лучший подарок на свете!
+										span.letters__text-part
+											| Дедушка Мороз
+									.letters__text-panel
+										button.panel__btn(type="button") Сохранить
+										button.panel__btn(type="button") Отмена
+							td.letters__item
+								| 250
+							td.letters__item.letters__item--status
+								select.letters__status(name="status")
+									option(value="1") Оплачено
+									option(value="2") Неоплачено
+								button.letters__btn.letters__del(type="button")
+									| Удалить
+								button.letters__btn.letters__copy(type="button")
+									| Копировать
+						tr
+							td.letters__item.letters__item--check
+								input#2.letters__checkbox(type="checkbox" name="letter" value="2")
+								label.letters__label(for="2")
+							td.letters__item.letters__item--number
+								a.letters__link(href="#") 1
+							td.letters__item.letters__item--address
+								| 681003,
+								br
+								|  Комсомольск-на-амуре, аллея труда, дом 57/4,кВ. 104
+							td.letters__item
+								| Егор
+							td.letters__item
+								| Алленова Маргарита
+							td.letters__item
+								| Алленову Егору
+							td.letters__item
+								| Margaritaal@
+							td.letters__item
+								| Обычное
+							td.letters__item
+								a.letters__link(href="#") Текст
+							td.letters__item
+								| 250
+							td.letters__item.letters__item--status
+								select.letters__status.letters__status--warn(name="status")
+									option(value="1") Оплачено
+									option(value="2" selected="") Неоплачено
+								button.letters__btn.letters__del(type="button")
+									| Удалить
+								button.letters__btn.letters__copy(type="button")
+									| Копировать
+						tr
+							td.letters__item.letters__item--check
+								input#3.letters__checkbox(type="checkbox" name="letter" value="3")
+								label.letters__label(for="3")
+							td.letters__item.letters__item--number
+								a.letters__link(href="#") 1
+							td.letters__item.letters__item--address
+								| 681003,
+								br
+								|  Комсомольск-на-амуре, аллея труда, дом 57/4,кВ. 104
+							td.letters__item
+								| Егор
+							td.letters__item
+								| Алленова Маргарита
+							td.letters__item
+								| Алленову Егору
+							td.letters__item
+								| Margaritaal@
+							td.letters__item
+								| Обычное
+							td.letters__item
+								a.letters__link(href="#") Текст
+							td.letters__item
+								| 250
+							td.letters__item.letters__item--status
+								select.letters__status(name="status")
+									option(value="1") Оплачено
+									option(value="2") Неоплачено
+								button.letters__btn.letters__del(type="button")
+									| Удалить
+								button.letters__btn.letters__copy(type="button")
+									| Копировать
+						tr
+							td.letters__item.letters__item--check
+								input#4.letters__checkbox(type="checkbox" name="letter" value="4")
+								label.letters__label(for="4")
+							td.letters__item.letters__item--number
+								a.letters__link(href="#") 1
+							td.letters__item.letters__item--address
+								| 681003,
+								br
+								|  Комсомольск-на-амуре, аллея труда, дом 57/4,кВ. 104
+							td.letters__item
+								| Егор
+							td.letters__item
+								| Алленова Маргарита
+							td.letters__item
+								| Алленову Егору
+							td.letters__item
+								| Margaritaal@
+							td.letters__item
+								| Обычное
+							td.letters__item
+								a.letters__link(href="#") Текст
+							td.letters__item
+								| 250
+							td.letters__item.letters__item--status
+								select.letters__status.letters__status--warn(name="status")
+									option(value="1") Оплачено
+									option(value="2" selected="") Неоплачено
+								button.letters__btn.letters__del(type="button")
+									| Удалить
+								button.letters__btn.letters__copy(type="button")
+									| Копировать
+						tr
+							td.letters__item.letters__item--check
+								input#5.letters__checkbox(type="checkbox" name="letter" value="5")
+								label.letters__label(for="5")
+							td.letters__item.letters__item--number
+								a.letters__link(href="#") 1
+							td.letters__item.letters__item--address
+								| 681003,
+								br
+								|  Комсомольск-на-амуре, аллея труда, дом 57/4,кВ. 104
+							td.letters__item
+								| Егор
+							td.letters__item
+								| Алленова Маргарита
+							td.letters__item
+								| Алленову Егору
+							td.letters__item
+								| Margaritaal@
+							td.letters__item
+								| Обычное
+							td.letters__item
+								a.letters__link(href="#") Текст
+							td.letters__item
+								| 250
+							td.letters__item.letters__item--status
+								select.letters__status.letters__status--warn(name="status")
+									option(value="1") Оплачено
+									option(value="2" selected="") Неоплачено
+								button.letters__btn.letters__del(type="button")
+									| Удалить
+								button.letters__btn.letters__copy(type="button")
+									| Копировать
+						tr
+							td.letters__item.letters__item--check
+								input#6.letters__checkbox(type="checkbox" name="letter" value="6")
+								label.letters__label(for="6")
+							td.letters__item.letters__item--number
+								a.letters__link(href="#") 1
+							td.letters__item.letters__item--address
+								| 681003,
+								br
+								|  Комсомольск-на-амуре, аллея труда, дом 57/4,кВ. 104
+							td.letters__item
+								| Егор
+							td.letters__item
+								| Алленова Маргарита
+							td.letters__item
+								| Алленову Егору
+							td.letters__item
+								| Margaritaal@
+							td.letters__item
+								| Обычное
+							td.letters__item
+								a.letters__link(href="#") Текст
+							td.letters__item
+								| 250
+							td.letters__item.letters__item--status
+								select.letters__status(name="status")
+									option(value="1") Оплачено
+									option(value="2") Неоплачено
+								button.letters__btn.letters__del(type="button")
+									| Удалить
+								button.letters__btn.letters__copy(type="button")
+									| Копировать
+						tr
+							td.letters__item.letters__item--check
+								input#7.letters__checkbox(type="checkbox" name="letter" value="7")
+								label.letters__label(for="7")
+							td.letters__item.letters__item--number
+								a.letters__link(href="#") 1
+							td.letters__item.letters__item--address
+								| 681003,
+								br
+								|  Комсомольск-на-амуре, аллея труда, дом 57/4,кВ. 104
+							td.letters__item
+								| Егор
+							td.letters__item
+								| Алленова Маргарита
+							td.letters__item
+								| Алленову Егору
+							td.letters__item
+								| Margaritaal@
+							td.letters__item
+								| Обычное
+							td.letters__item
+								a.letters__link(href="#") Текст
+							td.letters__item
+								| 250
+							td.letters__item.letters__item--status
+								select.letters__status(name="status")
+									option(value="1") Оплачено
+									option(value="2") Неоплачено
+								button.letters__btn.letters__del(type="button")
+									| Удалить
+								button.letters__btn.letters__copy(type="button")
+									| Копировать
+						tr
+							td.letters__item.letters__item--check
+								input#8.letters__checkbox(type="checkbox" name="letter" value="8")
+								label.letters__label(for="8")
+							td.letters__item.letters__item--number
+								a.letters__link(href="#") 1
+							td.letters__item.letters__item--address
+								| 681003,
+								br
+								|  Комсомольск-на-амуре, аллея труда, дом 57/4,кВ. 104
+							td.letters__item
+								| Егор
+							td.letters__item
+								| Алленова Маргарита
+							td.letters__item
+								| Алленову Егору
+							td.letters__item
+								| Margaritaal@
+							td.letters__item
+								| Обычное
+							td.letters__item
+								a.letters__link(href="#") Текст
+							td.letters__item
+								| 250
+							td.letters__item.letters__item--status
+								select.letters__status(name="status")
+									option(value="1") Оплачено
+									option(value="2") Неоплачено
+								button.letters__btn.letters__del(type="button")
+									| Удалить
+								button.letters__btn.letters__copy(type="button")
+									| Копировать
+			.paginator.paginator--admin
+				a.paginator__item.paginator__item--prev(href="#") Назад
+				a.paginator__item.paginator__item--current(href="#") 1
+				a.paginator__item(href="#") 2
+				a.paginator__item(href="#") 3
+				a.paginator__item(href="#") 4
+				a.paginator__item.paginator__item--dots(href="#") ...
+				a.paginator__item(href="#") 55
+				a.paginator__item.paginator__item--next(href="#") Вперед
+footer.page-footer.page-footer--inner
+	.page-footer__wrapper
+		p.page-footer__descr
+			| © 2017, ПочтаМороза.ру
+		p.page-footer__descr
+			| moroz@pochtamoroza.ru
+		p.page-footer__descr
+			| г.Москва, ул. Медовый переулок, д. 5, стр.1
+.panel
+	.panel__wrapper
+		form.panel__form(method="post" action="#")
+			p.panel__descr Выделено 3 письма
+			.panel__group
+				select.panel__status(name="stat")
+					option(value="1") Статус письма
+				select.panel__status(name="stat-2")
+					option(value="1") Оплачено
+					option(value="2") Неоплачено
+			.panel__group
+				button.panel__btn(type="button") Выгрузить в xls
+				button.panel__btn(type="button") Удалить
